@@ -3,6 +3,7 @@
 mysql_connect("mysql.myhost.com", "user", "sesame") or die (mysql_error ());
 
 // Select database
+
 mysql_select_db("mydatabase") or die(mysql_error());
 
 // SQL query
