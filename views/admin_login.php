@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if($count == 1) {
         $_SESSION['username'] = $username;
         $_SESSION['password']= $password;
-        header("location: welcome.php");
+        header("location: adminpanel.html");
 
     }else {
         echo "Your Login Name or Password is invalid";

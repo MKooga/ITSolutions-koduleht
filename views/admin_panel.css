@@ -1,0 +1,88 @@
+* {
+    font-family:sans-serif;
+}
+body{
+    padding-left:40px;
+}
+#header {
+
+}
+.menu {
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+.menu-1{
+    border:2px solid black;
+    border-radius:6px;
+    display:inline-block;
+    width:150px;
+    text-align:center;
+    margin-right:-4px;
+
+}
+#select-img {
+    font-size: 16px;
+    border:2px solid black;
+    border-radius:6px;
+    background-color:yellow;
+    display:inline-block;
+    padding-left:5px;
+    padding-right:5px;
+    margin:0 auto;
+}
+.select{
+    border:2px solid black;
+    border-radius:6px;
+    background-color:yellow;
+    display:inline-block;
+    padding:0px 10px;
+}
+#solutions {
+    border:1px solid black;
+    padding:5px;
+    margin-right:70%;
+}
+#company {
+    border: 1px solid black;
+    margin-right:65%;
+    padding-left:;
+}
+.services {
+    padding: 20px;
+}
+.serv{
+    border:1px solid black;
+    padding:20px;
+    margin-top:20px;
+    display:inline-block;
+}
+#portfolio {
+    padding:50px;
+}
+.reviews {
+    display:inline-block;
+    border:1px solid black;
+    padding: 50px;
+    margin-right:240px;
+}
+
+#rev {
+    display:inline-block;
+}
+.team {
+    padding:20px;
+}
+.team_1 {
+    border:1px solid black;
+    padding:20px;
+    display:inline-block;
+}
+input[type=text] {
+    width:250px;
+}
+#test {
+    background-color:black;
+    text-align:center;
+    padding:5px;
+}
