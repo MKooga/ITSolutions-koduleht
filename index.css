@@ -1,3 +1,7 @@
+h1 {
+    color: white;
+}
+
 div{
     border:2px solid black;
     margin: 0 auto;
@@ -5,7 +9,7 @@ div{
 }
 img{
     max-height:250px;
-    max-width:250px;
+    max-width:952px;
 }
 #logo{
     display: block;
@@ -18,3 +22,7 @@ img{
     max-width:100px;
 }
 .Hidden{display:none}
+
+#top-logo {
+    background-color: black;
+}

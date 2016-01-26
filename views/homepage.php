@@ -26,6 +26,9 @@
 </head>
 <body>
 <div class="container">
+
+    <?php include 'views/header.php'; ?>
+
     <div class="row" id="top-logo">
         <h1>SolutionsIT</h1>
     </div>
