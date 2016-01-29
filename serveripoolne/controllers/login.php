@@ -1,9 +1,39 @@
+<?php
+include("config.php");
+session_start();
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    // username and password sent from form
+
+    $myusername = mysqli_real_escape_string($db,$_POST['username']);
+    $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+
+    $sql = "SELECT id FROM modes WHERE username = '$username' and password = '$password'";
+    $result = mysqli_query($db,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $active = $row['id'];
+
+    $count = mysqli_num_rows($result);
+
+    // If result matched $myusername and $mypassword, table row must be 1 row
+
+    if($count == 1) {
+        $_SESSION['username']=$myusername;
+        $_SESSION['password']=$mypassword;
+        header("location:welcome.php");
+    }
+    else {
+        echo "Incorrect username or password!";
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="admin_login.css">
-    <title>SolutionIT</title>
+    <title>Admin login</title>
 </head>
 <body>
 <div class="wrapper" align="center">
@@ -36,5 +66,3 @@
 <!--/container -->
 </body>
 </html>
-
-
