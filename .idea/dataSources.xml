@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1570798773">
-    <data-source source="LOCAL" name="MySQL - solutionit@localhost" uuid="f0645d54-97d2-4c15-a707-e71554e64144">
+  <component name="DataSourceManagerImpl" format="xml" hash="1291480826">
+    <data-source source="LOCAL" name="MySQL - itstuff@localhost" uuid="fbbd18af-a1b1-4db4-b3b6-7a2df7746076">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/solutionit</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/itstuff</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
@@ -13,7 +13,6 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries />
     </data-source>
   </component>
 </project>
