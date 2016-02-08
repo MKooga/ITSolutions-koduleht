@@ -6,28 +6,25 @@
     <link rel="stylesheet" type="text/css" href="admin_panel.css">
 </head>
 <body>
+<form action="adminpanel.html" method="post">
 <h1>Name of the website</h1>
 <div id="solutions">
     <input type="text" placeholder="SolutionIT">
 </div>
-<div >
+<div>
+
     <h2>Website banner</h2>
     <img src="default-placeholder.png" height="300px" width="400px">
-    <div id="select-img">
-        <p>Select image</p>
-    </div>
+    <label class="upload">
+        <input type="file" name="pilt" accept="image/">
+        Select image
+    </label>
 </div>
+
 <h3>Our Company</h3>
-<div id="company">
-    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,
-        id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
-        maxime placeat facere possimus. omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-        autem quibusdam et aut officiis debitis alias consequatur aut perferendis doloribus asperiores repellat.
-    </p>
-</div>
+        <textarea>
+        </textarea>
+
 <h3>Services</h3>
 <div class="services">
     <div class="serv">
@@ -37,9 +34,10 @@
         <input type="text" placeholder="Web development">
         <p>Image</p>
         <img src="default-placeholder.png" height="200px" width="200px">
-        <div class="select">
-            <p>Select</p>
-        </div>
+        <label class="upload">
+            <input type="file" name="pilt" accept="image/">
+            Select
+        </label>
         <br>
         <input type="text" placeholder="Image ALT text">
     </div>
@@ -50,9 +48,10 @@
         <input type="text" placeholder="Web development">
         <p>Image</p>
         <img src="default-placeholder.png" height="200px" width="200px">
-        <div class="select">
-            <p>Select</p>
-        </div>
+        <label class="upload">
+            <input type="file" name="pilt" accept="image/">
+            Select
+        </label>
         <br>
         <input type="text" placeholder="Image ALT text">
     </div>
@@ -63,74 +62,83 @@
         <input type="text" placeholder="Web development">
         <p>Image</p>
         <img src="default-placeholder.png" height="200px" width="200px">
-        <div class="select">
-            <p>Select</p>
-        </div>
+        <label class="upload">
+            <input type="file" name="pilt" accept="image/">
+            Select
+        </label>
         <br>
         <input type="text" placeholder="Image ALT text">
     </div>
 </div>
+
 <h3>Portfolio</h3>
 <div id="portfolio">
     <p>Name</p>
     <img src="default-placeholder.png" height="150px" width="600px">
-    <div class="select">
-        <p>Select</p>
-    </div>
+    <label class="upload">
+        <input type="file" name="pilt" accept="image/">
+        Select
+    </label>
     <br>
     <input type="text" placeholder="Link URL">
     <p>Name</p>
     <img src="default-placeholder.png" height="150px" width="600px">
-    <div class="select">
-        <p>Select</p>
-    </div>
+    <label class="upload">
+        <input type="file" name="pilt" accept="image/">
+        Select
+    </label>
     <br>
     <input type="text" placeholder="Link URL">
     <p>Name</p>
     <img src="default-placeholder.png" height="150px" width="600px">
-    <div class="select">
-        <p>Select</p>
-    </div>
+    <label class="upload">
+        <input type="file" name="pilt" accept="image/">
+        Select
+    </label>
     <br>
     <input type="text" placeholder="Link URL">
-</div>
-<h3>Reviews</h3>
-<div id="rev">
-    <div class="reviews">
-    <input type="text" placeholder="Thank you for your services!">
-        </div>
-    <div class="reviews">
-    <input type="text" placeholder="Great work!">
-    </div>
 </div>
 
+<h3>Reviews</h3>
+    <div class="reviews">
+        <textarea>Thank you for your services!</textarea>
+        <a href="#">Delete</a>
+    </div>
+    <div class="reviews">
+        <textarea>Great work!</textarea>
+        <a href="#">Delete</a>
+    </div>
 <h3>Our Team</h3>
 <div class="team">
     <div class="team_1">
         <input type="text" placeholder="Rajur Hint">
         <p>Image</p>
         <img src="default-placeholder.png" height="200px" width="200px">
-        <div class="select">
-            <p>Select</p>
-        </div>
+        <label class="upload">
+            <input type="file" name="pilt" accept="image/">
+            Select
+        </label>
     </div>
     <div class="team_1">
         <input type="text" placeholder="Martin Kooga">
         <p>Image</p>
         <img src="default-placeholder.png" height="200px" width="200px">
-        <div class="select">
-            <p>Select</p>
-        </div>
+        <label class="upload">
+            <input type="file" name="pilt" accept="image/">
+            Select
+        </label>
     </div>
         <div class="team_1">
             <input type="text" placeholder="Hardi Kaiv">
             <p>Image</p>
             <img src="default-placeholder.png" height="200px" width="200px">
-            <div class="select">
-                <p>Select</p>
-            </div>
+            <label class="upload">
+                <input type="file" name="pilt" accept="image/">
+                Select
+            </label>
+        </div>
 </div>
-</div>
+
 <h3>Social links</h3>
 <div>
     <p>FB</p>
@@ -140,6 +148,7 @@
     <p>Google+</p>
     <input type="text" placeholder="Link URL">
 </div>
+
 <h3>Contact Us</h3>
 <div>
     <p>Address</p>
@@ -150,15 +159,11 @@
     <input type="text" placeholder="rajur.hint@khk.ee">
 </div>
 <div class="menu">
-    <div class="menu-1">
-        <p>Publish</p>
-    </div>
-    <div class="menu-1">
-        <p>View the site</p>
-    </div>
-    <div class="menu-1">
-        <p>Log out</p>
+        <a href="#" class="button">Publish</a>
+        <a href="#" class="button">View the site</a>
+        <a href="#" class="button">Log out</a>
     </div>
 </div>
+</form>
 </body>
 </html>
