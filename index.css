@@ -1,12 +1,14 @@
 h1 {
-    color: white;
+    color: black;
 }
+
+/*Kui vaja, paneme tagasi.
 
 div{
     border:2px solid black;
     margin: 0 auto;
     padding: 5px 5px 5px 5px;
-}
+}*/
 img{
     max-height:250px;
     max-width:952px;
@@ -21,8 +23,35 @@ img{
     max-height:100px;
     max-width:100px;
 }
-.Hidden{display:none}
 
-#top-logo {
+.navbar div {
+    border:none;
+}
+
+#services div{
+    height: inherit;
+}
+
+.navbar a{
+    color: black;
+}
+#navs{
+    float: right;
+}
+#services img{
+    max-height:100px;
+    max-width:100px;
+}
+#services{
     background-color: black;
+    text-align: center;
+}
+#services h1,#services h3 {
+    color: white;
+}
+#services{
+    color: red;
+}
+#main-nav{
+    background-color: silver;
 }

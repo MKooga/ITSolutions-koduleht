@@ -13,19 +13,7 @@ include_once("connect.php");
 
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#1").click(function () {
-                $("#1text").toggle();
-            });
-            $("#2").click(function () {
-                $("#2text").toggle();
-            });
-            $("#3").click(function () {
-                $("#3text").toggle();
-            });
-        });
-    </script>
+
 </head>
 <body>
 <div class="container">
@@ -33,13 +21,29 @@ include_once("connect.php");
 $result_logo = $connection->query($logo);
 $row_logo = $result_logo->fetch_assoc();
 
-echo'<div class="row" id="top-logo">
-        <h1>'. $row_logo['Logo_name'] .'</h1>
+echo'
+
+    <nav class="navbar navbar" id="main-nav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><h2>'. $row_logo['Logo_name'] .'</h2></a>
     </div>
-    <div class="row" id="bottom-logo">
+    <ul class="nav navbar-nav" id="navs">
+      <li class="active"><a href="#"><h3>Home</h3></a></li>
+      <li><a href="#services"><h3>Services</h3></a></li>
+      <li><a href="#portfolio"><h3>Portfolio</h3></a></li>
+      <li><a href="#contact"><h3>Contact</p></h3></a></li>
+      <li><a href="#socialLinks"><h3>Social media</h3></a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+    <div class="row" class="borderNone" id="bottom-logo">
         <img id="logo" src='.$row_logo['Logo_img'].'>
     </div>
-    <div class="row">';
+    <div class="row" id="services"> <a name="services"></a>';
 $services = "SELECT Service_id, Service_title, Service_name, Service_img, Service_description FROM Services";
 $result_services = $connection->query($services);
 
@@ -48,10 +52,10 @@ if ($result_services->num_rows > 0) {
     while($row_services = $result_services->fetch_assoc()) {
         $loopResultService= '
             <div class="col-md-4">
+             <img id="logo" src='.$row_logo['Logo_img'].'>
              <h1>' . $row_services['Service_title'] .'</h1>
              <h3>' . $row_services['Service_name'] .'</h3>
-             <button id=' . $row_services['Service_id'] .'>Toggle</button>
-            <p class="Hidden" id=' . $row_services['Service_id'] . 'text>' . $row_services['Service_description'] .'</p>
+             <p id=' . $row_services['Service_id'] . 'text>' . $row_services['Service_description'] .'</p>
             </div>
 
             ';
@@ -65,7 +69,7 @@ if ($result_services->num_rows > 0) {
 
    echo'
 </div>
-<div class="row"><h1>Portfolio</h1>';
+<div class="row"><h1>Portfolio</h1> <a name="portfolio"></a>';
 $portfolio = "SELECT Portfolio_name, Portfolio_img, Portfolio_description FROM Portfolio";
 $result_portfolio = $connection->query($portfolio);
 
@@ -93,12 +97,12 @@ $team_contact = "SELECT Contact_name, Contact_img, Contact_description FROM team
 $result_team = $connection->query($team_contact);
 $row_team = $result_team->fetch_assoc();
 
-echo'<div class="row">
+echo'<div class="row"> <a name="contact"></a>
         <h1>'. $row_team['Contact_name'] .'</h1>
         <img src='.$row_team['Contact_img'].'>
         <p>'. $row_team['Contact_description'] .'</p>
     </div>
-    <div class="row">';
+    <div class="row"> <a name="teamContact"></a>';
 
 $contact = "SELECT Contact_name, Contact_description, Contact_email, Contact_phone, Contact_img FROM Contact_info";
 $result_contact = $connection->query($contact);
@@ -126,7 +130,7 @@ if ($result_contact->num_rows > 0) {
 echo'</div>
 
 
-<div class="row">';
+<div class="row"> <a name="socialLinks"></a>';
 $socialLinks = "SELECT Link_source, Link_img FROM Social_links";
 $result_links = $connection->query($socialLinks);
 
